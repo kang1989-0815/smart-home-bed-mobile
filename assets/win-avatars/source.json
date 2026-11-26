@@ -1,0 +1,14 @@
+{
+  "package": "win-design",
+  "version": "2.6.17",
+  "source": "lib/themes/fonts/avatars.js",
+  "symbols": [
+    "w-avatar-young-man-lgt",
+    "w-avatar-young-woman-lgt",
+    "w-avatar-middle-aged-male-lgt",
+    "w-avatar-middle-aged-female-lgt",
+    "w-avatar-old-man-lgt",
+    "w-avatar-old-woman-lgt"
+  ],
+  "usage": "Unmodified symbol paths exported as standalone SVG; used by local WmAvatar image adapter, not the Vue component runtime."
+}
