@@ -1,0 +1,54 @@
+/* 身份入口：用户参考图 + Win Mobile 卡片/图标/文字层级。 */
+.app-shell.identity-shell{background:var(--wdm-brand);padding-bottom:0}
+.identity-page{display:flex;flex-direction:column;min-height:calc(100dvh - var(--wdm-statusbar-height) - env(safe-area-inset-top));background:var(--wdm-brand);padding:68px 16px 24px;color:#fff}
+.identity-heading{padding:0 0 14px;text-align:center}
+.identity-logo{display:block;width:64px;height:64px;border:0;border-radius:0;background:none;margin:0 auto 24px;color:#fff}
+.identity-logo svg{display:block;width:100%;height:100%}
+.identity-heading h1{font-size:20px;line-height:30px;font-weight:500;letter-spacing:0;color:#fff;white-space:nowrap;margin:0}
+.identity-heading h1 span{font:inherit;margin-left:6px}
+.identity-heading p{font-size:16px;line-height:24px;color:#fff;margin-top:10px}
+.identity-options{display:grid;gap:12px}
+.identity-card{display:flex;align-items:center;gap:12px;min-height:108px;width:100%;padding:20px 16px;background:#fff;border:0;border-radius:4px;box-shadow:none;text-align:left}
+.identity-icon{width:60px;height:60px;flex-shrink:0;border-radius:50%;background:#e5f9f1;color:var(--wdm-success)}
+.identity-icon .wm-icon{width:36px;height:36px}
+.identity-card.patient .identity-icon .wm-icon{fill:currentColor;stroke-width:1}
+.identity-card.staff .identity-icon{background:var(--wdm-brand-soft);color:var(--wdm-brand)}
+.identity-copy{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.identity-copy strong{font-size:18px;line-height:27px;font-weight:500;color:#000}
+.identity-copy>span{font-size:14px;line-height:21px;color:#666}
+.identity-copy small{align-self:flex-start;font-size:14px;line-height:20px;padding:1px 4px;border-radius:4px;background:#e5f9f1;color:var(--wdm-success)}
+.identity-card.staff .identity-copy small{background:var(--wdm-brand-soft);color:var(--wdm-brand)}
+.identity-arrow{width:16px;height:16px;flex-shrink:0;color:var(--wdm-icon)}
+.identity-footer{text-align:center;margin:12px 0 0;color:#fff}
+.identity-footer p{font-size:14px;line-height:24px;color:#fff;margin:0 0 4px}
+.identity-copyright{margin:auto 0 0;padding-top:56px;text-align:center;font-size:14px;line-height:24px;color:#fff}
+.identity-card:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:350px){.identity-page{padding:40px 12px 20px}.identity-heading h1{font-size:18px}.identity-card{padding:16px 12px;gap:10px}.identity-icon{width:48px;height:48px}.identity-copy strong{font-size:17px}.identity-copy>span,.identity-copy small{font-size:13px}.identity-footer p{font-size:13px}}
+@media(max-height:700px){.identity-page{padding-top:28px}.identity-logo{margin-bottom:16px}.identity-copyright{padding-top:24px}}
+/* Win Mobile Form / Cell / Input：750设计单位除2落地。 */
+.staff-login{padding:32px 24px;text-align:center}
+.staff-login h2{font-size:20px;line-height:28px;font-weight:500;color:var(--wdm-text)}
+.staff-login>p{font-size:16px;line-height:24px;color:var(--wdm-muted)}
+.wm-login-fields{background:#fff;border-radius:4px;overflow:hidden;text-align:left}
+.staff-login .wm-input-field{position:relative;min-height:56px;padding:6px 16px;gap:16px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.staff-login .wm-input-field+.wm-input-field{border:0;border-radius:0}
+.staff-login .wm-input-field+.wm-input-field:before{content:'';position:absolute;top:0;left:16px;right:16px;height:1px;background:var(--wdm-line)}
+.staff-login .wm-input-field .wm-field-label{display:flex;align-items:center;gap:4px;flex:0 0 88px;min-width:0;font-size:16px;line-height:24px;color:var(--wdm-secondary);white-space:nowrap}
+.staff-login .wm-input-field .wm-required{margin:0;font-size:14px;color:var(--wdm-error)}
+.staff-login .wm-input-field input{display:block;flex:1;width:0;min-width:0;height:44px;padding:0;border:0;border-radius:0;font-size:16px;line-height:24px;color:var(--wdm-text);background:transparent}
+.staff-login .wm-input-field:focus-within{box-shadow:inset 0 -1px var(--wdm-brand)}
+.staff-login .wm-input-field input:focus{outline:0}
+.staff-login .wm-input-field:has(input[aria-invalid=true]){box-shadow:inset 0 -1px var(--wdm-error)}
+.staff-login .login-error{min-height:24px;margin:8px 0 0;font-size:14px;line-height:24px;color:var(--wdm-error);text-align:left}
+.staff-login .primary-button{margin-top:20px;height:44px;border-radius:4px;font-size:16px;font-weight:400;line-height:24px}
+.staff-login .switch-identity{font-size:16px;line-height:24px;color:var(--wdm-brand);min-height:44px}
+@media(max-width:350px){.staff-login{padding:24px 16px}.staff-login .wm-input-field{padding:6px 12px;gap:12px}.staff-login .wm-input-field .wm-field-label{flex-basis:84px}}
+/* 品牌标识与版权：透明白色柔光，保持背景通透。 */
+.identity-logo{color:rgba(255,255,255,.82);background:transparent;filter:drop-shadow(0 0 5px rgba(255,255,255,.32)) drop-shadow(0 0 14px rgba(190,224,255,.24))}
+.identity-copyright{color:rgba(255,255,255,.72);text-shadow:0 0 5px rgba(255,255,255,.38),0 0 14px rgba(190,224,255,.26);font-weight:400}
+
+.identity-card.patient .identity-icon .identity-role-icon{fill:none;stroke-width:3}
+.identity-icon .identity-role-icon{width:36px;height:36px;flex-shrink:0}
+/* 身份卡片图标与文案间距。 */
+.identity-card{gap:20px}
+@media(max-width:350px){.identity-card{gap:16px}}

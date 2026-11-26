@@ -1,0 +1,444 @@
+/* WinDesign Mobile Library 2.0.2. Explicitly selected over PDF V2.1.0 for this update.
+   Source: references/sketch/tokens.md; geometry from the original Sketch symbols.
+   750-unit source -> 375 CSS logical width: values / 2 exactly once. */
+:root{
+ --wdm-brand:#0075f5;--wdm-brand-focus:#0062cf;--wdm-brand-disabled:#80bafa;
+ --wdm-brand-soft:#edf3fa;--wdm-secondary-button:#e9f3fe;
+ --wdm-text:#000;--wdm-secondary:#666;--wdm-muted:#999;
+ --wdm-bg:#f3f5f9;--wdm-line:#dbe1ed;--wdm-icon:#8599c0;
+ --wdm-success:#02c586;--wdm-warning:#ffa114;--wdm-error:#fe2b2b;
+ --wdm-radius:4px;--wdm-inset:16px;--wdm-gutter:16px;
+ --wdm-font-body:16px;--wdm-line-body:24px;
+ --w3-color-primary:#0075f5;
+}
+body{font-size:var(--wdm-font-body);line-height:var(--wdm-line-body)}
+/* Symbol 93FF9402: 750x104, inset32/16; field686x72, radius8. */
+.pl-search{padding:8px 16px;min-height:52px;gap:12px}
+.pl-search label{height:36px;padding:0 12px;border-radius:4px;background:#f3f5f9}
+.pl-search input{font-size:16px;line-height:24px}
+.pl-search input::placeholder{font-size:16px;color:#999}
+.pl-search label:focus-within{box-shadow:inset 0 0 0 1px var(--wdm-brand)}
+.pl-search .wm-icon{width:20px;height:20px;color:var(--wdm-icon)}
+/* Symbol 5484FCE4: inset32, corner8. Heights grow for actual content. */
+.pl-content,.feature-content{padding-left:16px;padding-right:16px}
+.pl-card,.record-card,.surface,.patient-card{border-radius:4px;border-color:var(--wdm-line);box-shadow:none}
+.pl-card,.record-card{padding:16px}
+.pl-identity h2,.patient-name{font-size:18px;line-height:27px;font-weight:500}
+.pl-nav h1{font-size:20px;line-height:30px;font-weight:500}
+.pl-identity p,.pl-meta,.pl-results,.detail-footnote{font-size:12px;line-height:18px}
+.pl-tabs,.patient-tabs,.feature-tabs{border-color:var(--wdm-line)}
+.pl-tabs button,.patient-tabs button,.feature-tabs button{height:44px;font-size:16px;line-height:24px}
+.pl-tabs button[aria-selected=true]:after,.patient-tabs button[aria-selected=true]:after,.feature-tabs button[aria-selected=true]:after{width:28px;height:2px;left:calc(50% - 14px);background:var(--wdm-brand)}
+/* Shared success/warning/error swatches retain the Sketch hue. */
+.status-green{color:#0e8f65;background:#e5f9f1}
+.status-orange{color:#a86100;background:#fff5e7}
+.status-blue{color:var(--wdm-brand);background:#edf3fa}
+.status-gray{color:#999;background:#f2f3f6}
+.pl-tags>span{color:var(--wdm-brand);background:#edf3fa}
+.pl-tags>span.attention{color:#a86100;background:#fff5e7}
+/* Symbol 9F73150C: 88-high button, 8 corners -> CSS44/4. */
+.primary-button{height:44px;border-radius:4px;font-size:16px;line-height:24px;background:var(--wdm-brand)}
+.primary-button:hover{background:var(--wdm-brand-focus)}
+.primary-button:disabled{background:var(--wdm-brand-disabled);color:#fff}
+.outline-button{border-radius:4px;min-height:32px;color:var(--wdm-brand);border-color:var(--wdm-brand)}
+.rx-card{border-radius:4px;border:1px solid var(--wdm-line);box-shadow:none}
+.rx-list,.rx-filters,.patient-demo{background:var(--wdm-bg)}
+.rx-items{border-radius:4px;background:#f1f7fe}
+.rx-copy p,.rx-items p{font-size:12px;line-height:18px}
+.rx-copy strong{color:var(--wdm-error)}
+.rx-check>span{border-color:#c9c9c9}
+.patient-nav{background:var(--wdm-brand);height:44px}
+.patient-identity{padding:12px 16px}
+.patient-nav h1{font-size:18px;line-height:27px}
+.tabbar,.patient-bottom{height:calc(54px + env(safe-area-inset-bottom));border-color:var(--wdm-line)}
+.tabbar button,.patient-bottom button{font-size:12px;line-height:18px;gap:4px}
+.tabbar .wm-icon,.patient-bottom button .wm-icon{width:20px;height:20px}
+.patient-bottom button{color:var(--wdm-icon)}
+.patient-bottom button[aria-current=page]{color:var(--wdm-brand)}
+.nav-bar,.sub-nav{height:44px}
+.welcome,.my-header{background:linear-gradient(110deg,#f1f7fe,#e2f0ff)}
+.identity-page{background:linear-gradient(155deg,#0075f5,#0062cf)}
+.identity-card{border-radius:8px;box-shadow:none}
+.identity-copy strong{font-size:20px;line-height:30px;font-weight:500}
+.identity-copy>span,.identity-copy small{font-size:14px;line-height:21px}
+.identity-footer p{font-size:14px;line-height:21px}
+@media(max-width:350px){.pl-content,.feature-content{padding-left:10px;padding-right:10px}.rx-copy p{white-space:normal}.rx-summary{gap:6px}.pl-search input::placeholder{font-size:14px}.identity-card{padding:18px 12px}.identity-copy>span,.identity-copy small{font-size:12px;line-height:18px}}
+/* 顶部导航：44px逻辑高度，左右独立操作区确保标题居中。 */
+.pl-top-nav{position:sticky;top:0;z-index:8;display:grid;grid-template-columns:48px minmax(0,1fr) 48px;align-items:center;min-height:calc(44px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);background:var(--wdm-brand);color:#fff;border-bottom:1px solid #ffffff20}
+.pl-top-nav h1{margin:0;text-align:center;font-size:18px;line-height:27px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-top-nav button{display:grid;place-items:center;width:44px;height:44px;padding:0;color:#fff;justify-self:center}
+.pl-top-nav button:first-child .wm-icon{transform:rotate(180deg)}
+.pl-top-nav .wm-icon{width:20px;height:20px}
+.pl-page-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 16px 10px;background:#fff}
+.pl-page-heading>span{font-size:18px;line-height:27px;font-weight:500;color:#000}
+.pl-page-heading small{font-size:12px;line-height:18px;color:#999}
+/* 模拟系统状态栏：仅Web预览使用，不读取或声明真实设备状态。 */
+:root{--wdm-statusbar-height:44px}
+.wm-statusbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;height:calc(var(--wdm-statusbar-height) + env(safe-area-inset-top));padding:env(safe-area-inset-top) 16px 0;background:var(--wdm-brand);color:#fff;flex-shrink:0}
+.statusbar-time{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;font-weight:400;line-height:24px;letter-spacing:.2px;font-variant-numeric:tabular-nums}
+.statusbar-indicators{display:flex;align-items:center;gap:6px}
+.statusbar-signal{width:18px;height:14px}.statusbar-wifi{width:18px;height:16px}.statusbar-battery{width:28px;height:16px}
+.pl-top-nav,.sub-nav{top:calc(var(--wdm-statusbar-height) + env(safe-area-inset-top))}
+.pl-top-nav{padding-top:0;min-height:44px}
+.identity-page{min-height:calc(100dvh - var(--wdm-statusbar-height) - env(safe-area-inset-top))}
+/* 患者详情重构：本地组合组件，依据Sketch卡片/单元格/轻标签/按钮变体。 */
+.patient-detail-page{background:var(--wdm-bg);min-height:calc(100dvh - 44px)}
+.patient-detail-page .patient-nav{position:sticky;top:calc(var(--wdm-statusbar-height) + env(safe-area-inset-top));z-index:12}
+.patient-detail-page .patient-identity{padding:16px;gap:12px;align-items:center;border-bottom:1px solid var(--wdm-line)}
+.patient-detail-page .patient-identity>div{display:grid;grid-template-columns:auto 1fr;column-gap:8px;row-gap:5px;align-items:center}
+.patient-detail-page .patient-identity strong{font-size:18px;line-height:27px;font-weight:500}
+.patient-detail-page .patient-identity small{grid-column:1/-1;border:0;padding:0;border-radius:0;font-size:12px;line-height:18px;color:var(--wdm-icon)}
+.patient-bed-count{font-size:12px!important;white-space:nowrap;color:#999!important;align-self:center}
+.patient-detail-page .patient-tabs{position:sticky;top:calc(var(--wdm-statusbar-height) + env(safe-area-inset-top) + 44px);z-index:10}
+.patient-detail-page .patient-demo{padding:8px 16px;font-size:12px;line-height:18px;color:#999}
+.patient-detail-page .rx-filters{display:flex;justify-content:space-between;padding:6px 16px 12px;gap:6px}
+.patient-detail-page .rx-filters button{font-size:14px;line-height:20px;min-height:28px;padding:4px 10px;background:#e7ebf3;color:#666;flex:1}
+.patient-detail-page .rx-filters button[aria-pressed=true]{background:var(--wdm-brand);color:white;font-weight:500}
+.rx-list-toolbar{display:flex;justify-content:space-between;align-items:center;padding:0 16px 10px;font-size:12px;color:#999}
+.rx-list-toolbar strong{font-weight:500;color:var(--wdm-brand)}
+.rx-list-toolbar button{padding:4px 0;color:var(--wdm-brand);font-size:14px;min-height:32px}
+.patient-detail-page .rx-list{padding:0 16px 130px}
+.patient-detail-page .rx-card{padding:16px;margin-bottom:12px;border-radius:4px;border:0;box-shadow:none}
+.patient-detail-page .rx-summary{gap:10px;align-items:center}
+.patient-detail-page .rx-check{width:24px;height:24px;margin:0;display:grid;place-items:center}
+.patient-detail-page .rx-check input{width:32px;height:32px;top:-4px;left:-4px}
+.patient-detail-page .rx-copy h2{font-size:16px;line-height:24px;font-weight:500;color:#000}
+.patient-detail-page .rx-copy time{display:block;font-size:12px;line-height:18px;color:#999;margin-top:4px}
+.patient-detail-page .rx-summary>.status{font-size:12px;line-height:20px;padding:0 7px;border-radius:3px}
+.patient-detail-page .rx-items{margin:14px 0 0;padding:0 12px;background:#fafbfd;border-radius:4px}
+.patient-detail-page .rx-items>div{padding:12px 0}
+.patient-detail-page .rx-items strong{font-weight:400;font-size:14px;line-height:21px;overflow-wrap:anywhere}
+.patient-detail-page .rx-items span{font-size:14px;color:#666}
+.patient-detail-page .rx-items p{font-size:12px;line-height:18px;margin-top:5px;color:#999}
+.rx-card-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--wdm-line)}
+.rx-amount-label{font-size:12px;color:#999}.rx-amount-label strong{font-size:16px;color:var(--wdm-error);font-weight:500;margin-left:6px;font-variant-numeric:tabular-nums}
+.rx-card-bottom>button{display:flex;align-items:center;gap:4px;font-size:14px;color:var(--wdm-brand);min-height:32px;padding:0}
+.rx-card-bottom .wm-icon{width:14px;height:14px}.rx-card-bottom button[aria-expanded=true] .wm-icon{transform:rotate(-90deg)}
+.patient-detail-page .rx-actionbar{padding:12px 16px;min-height:68px;gap:8px;font-size:14px}
+.patient-detail-page .rx-actionbar>div{gap:8px;flex:1;justify-content:flex-end}
+.patient-detail-page .rx-actionbar button{min-height:36px;border-radius:4px;font-size:14px;padding:6px 12px;white-space:nowrap}
+@media(max-width:350px){.patient-detail-page .rx-list{padding-left:10px;padding-right:10px}.patient-detail-page .rx-card{padding:12px}.patient-detail-page .rx-filters{padding-left:10px;padding-right:10px;gap:4px}.patient-detail-page .rx-filters button{font-size:12px;padding:4px 7px}.patient-detail-page .rx-actionbar{padding:10px; font-size:12px}.patient-detail-page .rx-actionbar button{font-size:12px;padding:6px 8px}.patient-bed-count{font-size:11px!important}.patient-detail-page .patient-identity{padding:12px;gap:8px}}
+/* 患者业务Tab与处方状态筛选：分层留白，下层采用矩形分段。 */
+.patient-detail-page .patient-tabs{border-bottom:1px solid var(--wdm-line)}
+.patient-detail-page .rx-workspace{padding-top:16px}
+.patient-detail-page .rx-filters{display:flex;margin:0 16px 12px;padding:3px;gap:0;border:1px solid var(--wdm-line);border-radius:4px;background:#e7ebf3}
+.patient-detail-page .rx-filters button{flex:1;border:0;border-radius:3px;min-height:32px;padding:5px 4px;font-size:14px;line-height:22px;background:transparent;color:#666;white-space:nowrap}
+.patient-detail-page .rx-filters button+button{margin-left:2px}
+.patient-detail-page .rx-filters button[aria-pressed=true]{background:#fff;color:var(--wdm-brand);font-weight:500;box-shadow:0 1px 3px #1c3f7214}
+.patient-detail-page .rx-filters button:focus-visible{outline:2px solid var(--wdm-brand);outline-offset:1px}
+.patient-detail-page .rx-list-toolbar{padding-top:0;padding-bottom:12px}
+@media(max-width:350px){.patient-detail-page .rx-filters{margin-left:10px;margin-right:10px}.patient-detail-page .rx-filters button{font-size:12px;padding:5px 2px}}
+/* 参考用户指定分段器：蓝色描边与分隔，实色选中项。 */
+.patient-detail-page .rx-filters{padding:0;gap:0;border:1px solid var(--wdm-brand);border-radius:4px;background:#fff;overflow:hidden}
+.patient-detail-page .rx-filters button{margin:0;border:0;border-radius:0;min-height:36px;padding:6px 4px;background:#fff;color:var(--wdm-brand);box-shadow:none;font-weight:400}
+.patient-detail-page .rx-filters button+button{margin-left:0;border-left:1px solid var(--wdm-brand)}
+.patient-detail-page .rx-filters button[aria-pressed=true]{background:var(--wdm-brand);color:#fff;font-weight:500;box-shadow:none}
+/* 筛选面板统一白底，保留与处方列表的层次。 */
+.patient-detail-page .rx-workspace{background:#fff}
+.patient-detail-page .rx-list-toolbar{background:#fff;padding-bottom:12px}
+.patient-detail-page .rx-list{background:var(--wdm-bg);padding-top:12px}
+/* Form/Cell：统一只读字段，750稿100高单元格按50px逻辑高落地。 */
+.wm-form-cell.info-row{display:grid;grid-template-columns:minmax(80px,30%) minmax(0,1fr);align-items:center;gap:16px;min-height:50px;padding:12px 0;font-size:16px;line-height:24px}
+.wm-form-cell dt{color:#999;overflow-wrap:anywhere}.wm-form-cell dd{text-align:right;color:#000;overflow-wrap:anywhere;word-break:normal}
+.wm-form-cell+.wm-form-cell{border-top:1px solid var(--wdm-line)}
+.staff-login .wm-input-field{display:flex;align-items:center;gap:12px;min-height:56px;background:#fff;margin:0;padding:6px 16px;font-size:16px;line-height:24px}
+.staff-login .wm-input-field:first-of-type{border-radius:4px 4px 0 0}
+.staff-login .wm-input-field+.wm-input-field{border-top:1px solid var(--wdm-line);border-radius:0 0 4px 4px}
+.wm-field-label{display:flex;align-items:center;gap:4px;min-width:88px;color:#000}.wm-required{color:var(--wdm-error);font-size:14px}
+.staff-login .wm-input-field input{margin:0;min-width:0;flex:1;border:0;height:44px;padding:0;background:transparent;outline-offset:0}
+.wm-input-field:focus-within{box-shadow:inset 0 -1px var(--wdm-brand)}
+.wm-input-field:has(input:disabled){background:#eee;color:#999}
+.wm-textarea-field .field-label{font-size:16px;line-height:24px;color:#000}
+.wm-textarea-field textarea{font-size:16px;line-height:24px;padding:12px;border:1px solid var(--wdm-line);border-radius:4px;background:#fff}
+.wm-textarea-field textarea::placeholder{color:#999;font-size:14px}
+.wm-textarea-field textarea[readonly]{padding:0;border:0;min-height:80px;color:#666}
+.wm-textarea-field .word-count{font-size:12px;line-height:18px}
+@media(max-width:350px){.wm-form-cell.info-row{font-size:14px;grid-template-columns:80px minmax(0,1fr);gap:10px}.staff-login .wm-input-field{padding-left:12px;padding-right:12px}.wm-field-label{min-width:76px}}
+.patient-service-group{overflow:hidden}
+.patient-service-group .section-title{padding-bottom:12px}
+.patient-service-group .wm-cell{min-height:72px;padding:14px 16px;gap:12px}
+.patient-service-group .wm-cell+.wm-cell:before{content:'';position:absolute;top:0;left:16px;right:16px;border-top:1px solid var(--wdm-line)}
+.patient-service-group .cell-copy{font-size:16px;line-height:24px}
+.patient-service-group .cell-copy small{font-size:12px;line-height:18px}
+.card-option.is-selected{border-color:var(--wdm-brand);background:#f1f7fe}
+.win-card-description{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.card-option .w3-radio{margin:0;padding:0;display:inline-flex;min-width:24px;min-height:32px;align-items:center}
+.card-option .w3-radio__label{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}
+.card-option .w3-radio__inner{width:20px;height:20px;border-radius:50%;border-color:#c9c9c9}
+.card-option .w3-radio__input.is-checked .w3-radio__inner{background:var(--wdm-brand);border-color:var(--wdm-brand)}
+.card-option .w3-radio__inner:after{border-radius:0;width:7px;height:4px;background:transparent;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff}
+.card-option .w3-radio__input.is-checked .w3-radio__inner:after{transform:translate(-50%,-65%) rotate(-45deg) scale(1)}
+/* 首页常用服务六宫格；报告与评估固定于底部导航之上。 */
+.services .wm-grid:has(.grid-item:nth-child(6)){grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 4px}
+.app-shell.home-page{padding-bottom:calc(152px + env(safe-area-inset-bottom))}
+.home-fixed-services{position:fixed;bottom:calc(54px + env(safe-area-inset-bottom));z-index:6;width:100%;max-width:480px;display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-top:1px solid var(--wdm-line);padding:10px 8px;min-height:76px}
+.home-fixed-services>button{display:flex;align-items:center;gap:8px;text-align:left;padding:8px;min-width:0;min-height:54px}
+.home-fixed-services>button+button{border-left:1px solid var(--wdm-line)}
+.fixed-service-icon{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;color:var(--wdm-brand);background:#edf3fa;border-radius:6px}
+.fixed-service-icon .wm-icon{width:20px;height:20px}
+.home-fixed-services>button:nth-child(2) .fixed-service-icon{color:#df8805;background:#fff5e7}
+.home-fixed-services>button>span:nth-child(2){display:flex;flex-direction:column;flex:1;min-width:0;gap:2px}
+.home-fixed-services strong{font-size:16px;line-height:24px;font-weight:500;white-space:nowrap}
+.home-fixed-services small{font-size:12px;line-height:18px;color:#999;white-space:nowrap}
+.home-fixed-services .chevron{width:12px;height:12px}
+@media(max-width:350px){.home-fixed-services{padding:8px 4px}.home-fixed-services>button{padding:6px;gap:6px}.home-fixed-services strong{font-size:14px}.home-fixed-services small{font-size:11px}.home-fixed-services .chevron{display:none}}
+/* 首页取消宣传头图；固定入口采用健康关怀浅绿色卡片语言。 */
+.home-page .page-content{padding-top:16px}
+.home-page .patient-card{margin-top:0}
+.home-fixed-services{background:var(--wdm-bg);padding:10px 16px;gap:10px;border-top:0;min-height:104px}
+.home-fixed-services>button{position:relative;overflow:hidden;border:0!important;border-radius:4px;background:#eaf4ef;padding:14px 12px;min-height:84px;gap:9px}
+.home-fixed-services>button:after{content:'';position:absolute;right:-12px;bottom:-24px;width:75px;height:75px;border-radius:50%;background:#d8eee9;pointer-events:none;z-index:0}
+.home-fixed-services>button>span,.home-fixed-services .chevron{position:relative;z-index:1}
+.home-fixed-services .fixed-service-icon,.home-fixed-services>button:nth-child(2) .fixed-service-icon{width:30px;height:36px;background:#fff;color:#5c9b88;border-radius:4px;transform:rotate(6deg);flex-shrink:0}
+.home-fixed-services strong{color:#264c41;font-size:16px;line-height:24px;font-weight:500}
+.home-fixed-services small{color:#5d8a7b;font-size:11px;line-height:17px;white-space:normal}
+.home-fixed-services .chevron{display:none}
+.app-shell.home-page{padding-bottom:calc(176px + env(safe-area-inset-bottom))}
+@media(max-width:350px){.home-fixed-services{padding:8px 10px;gap:8px}.home-fixed-services>button{padding:12px 8px;gap:6px}.home-fixed-services strong{font-size:14px}.home-fixed-services .fixed-service-icon{width:25px}.home-fixed-services small{font-size:10px}}
+/* 首页剩余区域由两张纵向服务卡平分；蓝/绿两种主题。 */
+.app-shell.home-page{height:100dvh;min-height:0;display:flex;flex-direction:column;padding-bottom:calc(54px + env(safe-area-inset-bottom));overflow:auto}
+.home-page>.wm-statusbar,.home-page>.nav-bar{flex-shrink:0}
+.home-page>#app{flex:1;min-height:0;display:flex;flex-direction:column}
+.home-page .page-content{flex-shrink:0;padding-top:12px}
+.home-page .care-footer{display:none}
+.home-page .home-fixed-services{position:relative;bottom:auto;width:auto;max-width:none;flex:1;min-height:220px;display:grid;grid-template-columns:1fr;grid-template-rows:1fr 1fr;gap:12px;margin:0;padding:12px 16px 16px;background:var(--wdm-bg)}
+.home-fixed-services>button{min-height:96px;padding:20px 24px;gap:16px;align-items:center;border-radius:4px}
+.home-fixed-services>button:first-child{background:#e9f3fe}
+.home-fixed-services>button:first-child:after{background:#d2e5fb;width:140px;height:140px;right:-18px;bottom:-55px}
+.home-fixed-services>button:nth-child(2){background:#e5f9f1}
+.home-fixed-services>button:nth-child(2):after{background:#caeee0;width:140px;height:140px;right:-18px;bottom:-55px}
+.home-fixed-services>button:first-child .fixed-service-icon{color:#0075f5;background:#fff}
+.home-fixed-services>button:nth-child(2) .fixed-service-icon{color:#0e8f65;background:#fff}
+.home-fixed-services .fixed-service-icon{width:48px;height:52px;transform:rotate(6deg);border-radius:6px}
+.home-fixed-services .fixed-service-icon .wm-icon{width:28px;height:28px}
+.home-fixed-services strong{font-size:20px;line-height:30px;color:#173c69}
+.home-fixed-services small{font-size:14px;line-height:21px;color:#6085aa}
+.home-fixed-services>button:nth-child(2) strong{color:#235b49}
+.home-fixed-services>button:nth-child(2) small{color:#5d8a7b}
+.home-fixed-services .chevron{display:block;color:inherit;width:16px;height:16px}
+@media(max-height:780px){.home-page .home-fixed-services{min-height:200px}.home-fixed-services>button{padding:14px 20px}.home-page .services .wm-grid{gap:14px 4px;padding-top:10px;padding-bottom:14px}.home-page .section-title{padding-top:12px}}
+/* 白色内容容器去除外边框；控件边界和字段分割线保持。 */
+.surface,.patient-card,.record-card,.pl-card,.rx-card,
+.patient-detail-page .rx-card,.detail-card,.small-service{border:0;box-shadow:none}
+/* 首页品牌栏：简洁标识、名称与辅助语建立层级。 */
+.nav-bar{height:68px;padding:12px 20px;gap:10px;border:0;background:#fff}
+.nav-bar .brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#edf3fa;color:var(--wdm-brand);line-height:1;flex-shrink:0}
+.nav-bar .brand-mark svg{display:block;width:28px;height:28px}
+.brand-copy{display:flex;flex-direction:column;gap:1px}
+.nav-bar .brand-copy h1{font-size:18px;line-height:26px;letter-spacing:1px;font-weight:600;color:#17335a;margin:0}
+.brand-copy>span{font-size:11px;line-height:16px;letter-spacing:1px;color:#8599b3}
+.expense-summary{display:flex;flex-direction:column;background:#e9f3fe;padding:20px 16px;border-radius:4px;margin-bottom:16px;color:#666;gap:8px}.expense-summary>strong{font-size:30px;line-height:40px;color:var(--wdm-brand);font-weight:500}.expense-summary label{display:flex;justify-content:space-between;font-size:14px;margin-top:8px}.expense-summary select{border:0;background:transparent;color:var(--wdm-brand);font:inherit}.expense-amount{font-size:18px;color:var(--wdm-error);font-weight:500}.metric-tabs{display:flex;overflow-x:auto;gap:8px;margin-bottom:16px;padding-bottom:4px}.metric-tabs button{white-space:nowrap;min-height:36px;padding:6px 16px;border-radius:4px;color:#666;background:#e7ebf3;font-size:14px}.metric-tabs button[aria-selected=true]{color:#fff;background:var(--wdm-brand)}.clinical-field{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;border-bottom:1px solid var(--wdm-line);font-size:14px}.clinical-field input{font:inherit;border:0;background:#fafbfd;padding:8px;min-width:0;width:170px;max-width:100%;border-radius:4px}.clinical-field>span{display:flex;align-items:center;gap:6px;max-width:65%;color:#999;font-size:12px}.clinical-field>span input{width:100px;color:#000}.clinical-section-title{font-size:16px;font-weight:500;display:flex;justify-content:space-between;margin:20px 0 12px}.clinical-section-title span{font-size:12px;color:#999}.vital-record{display:flex;justify-content:space-between;align-items:center;gap:12px}.vital-record>span{font-size:12px;color:#999}.vital-record strong{font-size:20px;color:var(--wdm-brand);font-weight:500}.vital-record small{font-size:12px;color:#999}.consult-doctor{display:flex;gap:12px;align-items:center;background:#fff;padding:16px;border-radius:4px}.consult-doctor>.wm-icon{color:var(--wdm-brand)}.consult-doctor span{font-size:16px}.consult-doctor small{display:block;font-size:12px;color:#999;margin-top:4px}.message-list{min-height:220px;padding:12px 0}.message-item{text-align:right;margin:12px 0}.message-item time,.message-item small{display:block;font-size:11px;color:#999}.message-item p{display:inline-block;max-width:85%;text-align:left;background:#e2f0ff;color:#000;padding:12px;border-radius:6px;margin:6px 0;font-size:16px;line-height:24px;white-space:pre-wrap;overflow-wrap:anywhere}.consult-compose{display:flex;align-items:flex-end;gap:10px;background:white;padding:12px;border-radius:4px}.consult-compose textarea{min-height:66px;flex:1;font-size:16px}.consult-compose .primary-button{width:64px;flex-shrink:0;margin:0;height:44px}@media(max-width:350px){.clinical-field input{width:145px;font-size:12px}.vital-record{align-items:flex-start}.vital-record strong{font-size:18px}}
+/* Win移动导航标题：品牌蓝底，标题和说明居中。 */
+.nav-bar{height:100px;min-height:100px;display:flex;justify-content:center;align-items:center;padding:14px 16px;background:var(--wdm-brand);color:#fff;border:0}
+.nav-bar .brand-mark{display:none}
+.nav-bar .brand-copy{align-items:center;text-align:center;gap:7px}
+.nav-bar .brand-copy h1{font-size:24px;line-height:34px;font-weight:500;letter-spacing:2px;color:#fff}
+.nav-bar .brand-copy>span{font-size:16px;line-height:24px;font-weight:400;letter-spacing:1px;color:#fff}
+@media(max-height:780px){.nav-bar{height:88px;min-height:88px;padding:10px 16px}.nav-bar .brand-copy{gap:4px}.nav-bar .brand-copy h1{font-size:22px;line-height:32px}}
+/* Win移动NavBar：左右操作区+居中主副标题。 */
+.nav-bar.wm-title-nav{position:relative;display:grid;grid-template-columns:80px minmax(0,1fr) 80px;gap:4px;height:64px;min-height:64px;padding:8px 12px;background:var(--wdm-brand)}
+.title-nav-left,.title-nav-right{display:flex;align-items:center;justify-content:space-between;gap:0}
+.title-nav-left button{display:grid;place-items:center;color:white;width:36px;height:44px;padding:6px}
+.title-nav-left svg{width:24px;height:24px}
+.title-nav-right button{color:white;font-size:14px;line-height:22px;height:44px;padding:0 4px}
+.wm-title-nav .brand-copy{min-width:0;gap:1px}
+.nav-bar.wm-title-nav .brand-copy h1{font-size:20px;line-height:28px;letter-spacing:0;white-space:nowrap}
+.nav-bar.wm-title-nav .brand-copy>span{font-size:12px;line-height:18px;letter-spacing:0;color:#b2d7ff;white-space:nowrap}
+@media(max-width:350px){.nav-bar.wm-title-nav{grid-template-columns:64px minmax(0,1fr) 64px;padding-left:8px;padding-right:8px}.title-nav-left button{width:30px}.title-nav-right button{font-size:12px;padding:0 2px}.nav-bar.wm-title-nav .brand-copy h1{font-size:18px}.nav-bar.wm-title-nav .brand-copy>span{font-size:10px}}
+/* Sketch 164B64BD：3.文字+图标/2.2i+2t，750×88 -> 375×44。 */
+.nav-bar.wm-title-nav{height:44px;min-height:44px;padding:0 16px;grid-template-columns:64px minmax(0,1fr) 72px;gap:4px}
+.title-nav-left{gap:8px}.title-nav-left button{width:28px;height:44px;padding:2px}
+.title-nav-right{gap:8px}.title-nav-right button{font-size:16px;padding:0;min-width:32px}
+.nav-bar.wm-title-nav .brand-copy h1{font-size:18px;line-height:24px}
+.nav-bar.wm-title-nav .brand-copy>span{font-size:12px;line-height:16px}
+@media(max-width:350px){.nav-bar.wm-title-nav{padding:0 10px;grid-template-columns:56px minmax(0,1fr) 64px}.title-nav-left{gap:4px}.title-nav-right{gap:4px}.title-nav-right button{font-size:14px}.nav-bar.wm-title-nav .brand-copy>span{font-size:10px}}
+/* 明确导航栏前景色，覆盖旧品牌栏的深色文字。 */
+header.wm-title-nav{background:#0075f5;color:#fff;display:grid}
+header.wm-title-nav .brand-copy h1{color:#fff;text-align:center}
+header.wm-title-nav .brand-copy{display:flex;flex-direction:column;align-items:center;justify-content:center}
+header.wm-title-nav button{color:#fff}
+/* 精简标题栏，仅保留返回；对称操作区确保标题居中。 */
+.nav-bar.wm-title-nav{grid-template-columns:64px minmax(0,1fr) 64px}
+.title-nav-left{justify-content:flex-start}
+@media(max-width:350px){.nav-bar.wm-title-nav{grid-template-columns:40px minmax(0,1fr) 40px}}
+.my-page .page-content{padding-top:16px}
+.my-page .patient-card{margin-top:0}
+/* 统一患者Banner，详情/业务页与首页保持一致。 */
+.patient-banner.patient-card{margin:12px 16px 0;padding:16px;min-height:88px;gap:12px;background:#fff;border:0;border-radius:4px;box-shadow:none}
+.page-content>.patient-banner.patient-card{margin:0}
+.patient-banner .patient-name{font-size:18px;line-height:27px;font-weight:500}
+.patient-banner .patient-info p{font-size:12px;line-height:18px;color:#999;margin-top:4px}
+.patient-banner .switch-button{font-size:14px;min-height:44px;flex-shrink:0}
+.patient-banner .tag{font-size:11px;line-height:18px;font-weight:400}
+@media(max-width:350px){.patient-banner.patient-card{margin-left:10px;margin-right:10px;padding:12px;gap:8px}.page-content>.patient-banner.patient-card{margin:0}.patient-banner .patient-name{font-size:16px}}
+/* 体征记录：左侧指标导航，右侧录入与历史。 */
+.vitals-layout{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:start}
+.vitals-layout .metric-tabs{position:sticky;top:100px;display:flex;flex-direction:column;gap:0;overflow:visible;margin:0;padding:0;background:#fff;border-radius:4px}
+.vitals-layout .metric-tabs button{position:relative;width:100%;min-height:50px;padding:12px 4px;border-radius:0;background:#fff;color:#666;font-size:14px;text-align:center}
+.vitals-layout .metric-tabs button[aria-selected=true]{background:#e9f3fe;color:var(--wdm-brand);font-weight:500}
+.vitals-layout .metric-tabs button[aria-selected=true]:before{content:'';position:absolute;left:0;top:14px;bottom:14px;width:3px;background:var(--wdm-brand);border-radius:2px}
+.vitals-main{min-width:0}.vitals-main .record-card{padding:12px}
+.vitals-main .clinical-field{flex-direction:column;align-items:flex-start;gap:6px;padding:10px 0}
+.vitals-main .clinical-field input{width:100%;font-size:14px;box-sizing:border-box}
+.vitals-main .clinical-field>span{max-width:100%;width:100%}.vitals-main .clinical-field>span input{flex:1;width:0}
+.vitals-main .vital-record{flex-direction:column;align-items:flex-start;gap:8px}
+.vitals-main .clinical-section-title{margin-top:16px}
+@media(max-width:350px){.vitals-layout{grid-template-columns:62px minmax(0,1fr);gap:8px}.vitals-main .record-card{padding:10px}.vitals-main .block-title{font-size:14px}}
+.vitals-main .clinical-section-title{margin:0 0 12px}.vitals-main{padding-bottom:120px}
+.vital-floating{position:fixed;right:max(16px,calc((100vw - 480px)/2 + 16px));bottom:calc(24px + env(safe-area-inset-bottom));z-index:15;display:flex;flex-direction:column;gap:14px}
+.vital-floating button{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;color:#fff;background:var(--wdm-brand);box-shadow:0 3px 10px #0075f52b}.vital-floating svg{width:26px;height:26px}
+.vital-popup{max-height:85dvh;overflow:auto;padding:20px 20px calc(24px + env(safe-area-inset-bottom));border-radius:12px 12px 0 0}
+.vital-popup .sheet-head h2{font-size:18px;line-height:27px}.vital-popup .sheet-head button{font-size:28px;width:40px;height:40px;color:#666}
+.vital-popup .clinical-field{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:14px 0;font-size:16px;line-height:24px}
+.vital-popup .clinical-field>span:last-child{display:flex;align-items:center;width:100%;max-width:none;gap:8px}
+.vital-popup .clinical-field input{width:100%;height:44px;background:#f3f5f9;border:1px solid transparent;border-radius:4px;padding:10px 12px;font-size:16px;line-height:24px;min-width:0;color:#000}
+.vital-popup .clinical-field input:focus{outline:none;border-color:var(--wdm-brand)}
+.vital-popup input[type=number]{appearance:textfield;-moz-appearance:textfield}.vital-popup input::-webkit-inner-spin-button{appearance:none}
+.vital-popup small{font-size:14px;color:#999}.vital-validation{font-size:12px;color:var(--wdm-error);min-height:18px;margin-top:10px}
+.chart-caption{font-size:12px;color:#999;margin:12px 0}.vital-chart{width:100%;height:auto;background:#fafbfd;border-radius:4px}.vital-chart text{font-size:10px;fill:#8599c0}.chart-records{max-height:200px;overflow:auto;margin-top:12px}.chart-records>div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--wdm-line);padding:10px 0;font-size:12px}.chart-records span{color:#999}.chart-records strong{font-weight:500}
+/* 业务页面导航栏统一品牌蓝主题。 */
+.sub-nav{background:var(--wdm-brand);color:#fff;border-bottom:0}
+.sub-nav h1,.sub-nav>button{color:#fff}
+.wm-date-trigger{display:flex;justify-content:space-between;align-items:center;width:100%;height:44px;padding:10px 12px;background:#f3f5f9;border:1px solid transparent;border-radius:4px;font-size:16px;line-height:24px;color:#000;text-align:left}
+.wm-date-trigger:focus-visible{outline:1px solid var(--wdm-brand)}.wm-date-trigger svg{width:20px;height:20px;color:var(--wdm-icon)}
+.wm-datetime-picker{padding:0 0 calc(20px + env(safe-area-inset-bottom));border-radius:12px 12px 0 0}
+.datetime-toolbar{display:grid;grid-template-columns:64px 1fr 64px;align-items:center;height:56px;border-bottom:1px solid var(--wdm-line)}.datetime-toolbar h2{text-align:center;font-size:16px;font-weight:500}.datetime-toolbar button{font-size:16px;color:var(--wdm-brand);height:44px}.datetime-toolbar button:first-child{color:#666}
+.datetime-columns{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:4px;padding:16px 12px}.datetime-column>span{display:block;text-align:center;font-size:12px;color:#999;margin-bottom:8px}.datetime-column select{display:block;width:100%;height:176px;border:0;background:#fff;font:inherit;font-size:16px;text-align:center;color:#666;outline-color:var(--wdm-brand)}.datetime-column option{padding:8px 0;line-height:24px}.datetime-column option:checked{background:#e9f3fe;color:var(--wdm-brand);font-weight:500}
+.vital-entry-page .clinical-field{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:16px 0;font-size:16px;line-height:24px}
+.vital-entry-page .clinical-field>span:last-child{display:flex;align-items:center;width:100%;max-width:none;gap:8px}
+.vital-entry-page .clinical-field input{width:100%;min-width:0;height:44px;border:1px solid transparent;border-radius:4px;background:#f3f5f9;padding:10px 12px;font-size:16px;color:#000}
+.vital-entry-page .clinical-field input:focus{outline:none;border-color:var(--wdm-brand)}
+.vital-entry-page input[type=number]{appearance:textfield;-moz-appearance:textfield}.vital-entry-page input::-webkit-inner-spin-button{appearance:none}
+.vital-entry-page small{font-size:14px;color:#999}.vital-entry-page .primary-button{margin-top:20px}
+.record-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0 16px}
+.record-section-heading h2{font-size:18px;line-height:27px;font-weight:500;margin:0;min-width:0}
+.record-section-heading>span,.clinical-section-title>span{margin-left:auto;text-align:right;white-space:nowrap;font-size:12px;line-height:18px;color:#999;font-weight:400;flex-shrink:0}
+.chart-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}.chart-controls select{font:inherit;font-size:14px;border:0;background:#fff;color:var(--wdm-brand);min-height:40px;max-width:150px}.chart-title{text-align:center;font-size:18px;line-height:27px;font-weight:500}.vital-entry-page:has(.chart-controls) .chart-caption{text-align:center;margin:8px 0 12px}.vital-entry-page:has(.chart-controls) .vital-chart{background:#fff;min-height:360px}.vital-entry-page:has(.chart-controls){padding:12px}
+.clinical-content .results-table th:first-child{width:auto}.clinical-content .results-table td,.clinical-content .results-table th{padding:12px 5px;font-size:12px}.clinical-content .results-table td:not(:first-child){white-space:nowrap}.clinical-content .results-table tfoot th{text-align:left;color:#666}.clinical-content .results-table tfoot td{color:var(--wdm-error);font-weight:500}
+.expense-summary{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;min-height:60px}
+.expense-total{display:flex;align-items:baseline;gap:10px;min-width:0}.expense-total>span{font-size:14px;white-space:nowrap}.expense-total>strong{font-size:24px;line-height:32px;font-weight:500;color:var(--wdm-brand)}
+.expense-summary label{margin:0;flex-shrink:0}.expense-summary select{max-width:110px;font-size:14px}
+.expense-amount{color:var(--wdm-brand)}.clinical-content .record-meta{padding-bottom:0}
+.expense-detail-info dl{margin:0}.expense-detail-info .wm-form-cell.info-row{font-size:14px;min-height:44px;padding:10px 0;grid-template-columns:80px minmax(0,1fr);gap:8px}
+.expense-detail-info .wm-form-cell:last-child dd{color:var(--wdm-brand);font-weight:500}
+.expense-orders .block-title{font-size:14px;color:#999;padding-bottom:14px;border-bottom:1px solid var(--wdm-line)}
+.expense-order{padding:14px 0}.expense-order+.expense-order{border-top:1px solid var(--wdm-line)}.expense-order p{font-size:14px;line-height:22px;color:#333}.expense-order>div{display:flex;justify-content:space-between;gap:8px;margin-top:6px;font-size:12px;line-height:18px;color:#999}.expense-order strong{color:var(--wdm-brand);font-weight:500;white-space:nowrap}
+@media(max-width:350px){.expense-total{gap:6px}.expense-total>strong{font-size:20px}.expense-summary{padding:12px;gap:8px}.expense-summary select{font-size:12px;max-width:90px}}
+/* 患者详情导航与筛选留白：统一16px内容边距。 */
+.patient-detail-page>.patient-banner{margin-bottom:16px}
+.patient-detail-page .patient-tabs{margin:0 16px;background:#fff;border-bottom:1px solid var(--wdm-line);border-radius:4px 4px 0 0}
+.patient-detail-page .patient-tabs button{font-size:16px;padding:0 4px}
+.patient-detail-page .rx-workspace{margin:0 16px;background:transparent;padding-top:0}
+.patient-detail-page .rx-filters{margin:0;background:#fff;border-radius:4px}
+.patient-detail-page .rx-workspace:before{content:'';display:block;height:16px;background:#fff}
+.patient-detail-page .rx-list-toolbar{padding:12px 0;background:#fff;min-height:48px}
+.patient-detail-page .rx-list{margin:0 -16px;padding:12px 16px 130px;background:var(--wdm-bg)}
+.patient-detail-page .rx-filters{box-shadow:0 0 0 16px #fff}
+.patient-detail-page .rx-list-toolbar{position:relative;z-index:1}
+@media(max-width:350px){.patient-detail-page .patient-tabs{margin-left:12px;margin-right:12px}.patient-detail-page .patient-tabs button{font-size:14px}.patient-detail-page .rx-workspace{margin-left:16px;margin-right:16px}.patient-detail-page>.patient-banner{margin-bottom:12px}}
+.patient-detail-page .rx-workspace{padding-left:16px;padding-right:16px;background:#fff;border-radius:0 0 4px 4px}
+.patient-detail-page .rx-filters{box-shadow:none}
+.patient-detail-page .rx-list{margin-left:-32px;margin-right:-32px;padding-left:16px;padding-right:16px}
+/* 患者详情上方白色区块取消边线。 */
+.patient-detail-page>.patient-banner,.patient-detail-page .patient-tabs{border:0;box-shadow:none}
+/* 固定操作栏脱离带边距的workspace，始终按应用视口居中。 */
+.patient-detail-page .rx-actionbar{left:50%;right:auto;transform:translateX(-50%);width:min(100%,480px);max-width:480px;box-sizing:border-box;display:grid;grid-template-columns:minmax(56px,1fr) minmax(0,240px);gap:10px;padding:10px 16px}
+.patient-detail-page .rx-actionbar>div{display:grid;grid-template-columns:.8fr 1.4fr .8fr;gap:6px;min-width:0;width:100%}
+.patient-detail-page .rx-actionbar button{width:100%;min-width:0;padding:6px 4px;font-size:14px;white-space:nowrap}
+@media(max-width:350px){.patient-detail-page .rx-actionbar{padding:10px;grid-template-columns:56px minmax(0,1fr);gap:8px}.patient-detail-page .rx-actionbar button{font-size:12px}.patient-detail-page .rx-actionbar>div{gap:4px}}
+/* 缩小信息至筛选区留白，保留页签底部分割线。 */
+.patient-detail-page>.patient-banner{margin-bottom:8px}
+.patient-detail-page .patient-tabs{border:0;border-bottom:1px solid var(--wdm-line)}
+.patient-detail-page .rx-workspace:before{height:8px}
+@media(max-width:350px){.patient-detail-page>.patient-banner{margin-bottom:8px}}
+.orders-workspace{margin:0 16px;background:#fff}.orders-term{display:flex;gap:22px;padding:0 16px;border-bottom:1px solid #f3f5f9}.orders-term button{position:relative;min-height:44px;padding:8px 0;color:#666;font-size:16px}.orders-term button[aria-selected=true]{color:var(--wdm-brand);font-weight:500}.orders-term button[aria-selected=true]:after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--wdm-brand)}.orders-categories{display:flex;align-items:center;gap:8px;padding:12px 16px;flex-wrap:wrap}.orders-categories button{border-radius:18px;padding:5px 14px;min-height:30px;background:#f3f5f9;color:#666;font-size:14px}.orders-categories button[aria-pressed=true]{background:var(--wdm-brand);color:#fff;font-weight:500}.orders-categories .order-new{margin-left:auto;color:var(--wdm-brand);background:#e9f3fe;font-weight:500}.orders-selection{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:1px solid var(--wdm-line);font-size:14px;color:#8599c0;min-height:50px}.orders-check{display:flex;align-items:center;gap:8px;color:#666;flex-shrink:0}.orders-check input{appearance:none;width:22px;height:22px;border:1px solid #c9c9c9;border-radius:0;margin:0;background:#fff;cursor:pointer}.orders-check input:checked{background:var(--wdm-brand);border-color:var(--wdm-brand)}.orders-check input:checked:after{content:'✓';color:#fff;display:block;text-align:center;line-height:20px}.orders-check input:disabled{background:#eee;cursor:default}.orders-list{margin:0 -16px;background:var(--wdm-bg);padding:12px 16px 85px}.order-card{display:flex;align-items:flex-start;gap:10px;padding:16px;background:#fff;border-radius:8px;margin-bottom:12px}.order-content{flex:1;min-width:0}.order-content p{font-size:16px;line-height:25px;color:#000;overflow-wrap:anywhere}.order-meta{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:8px;font-size:12px;line-height:18px;color:#8599c0}.order-card>.status{flex-shrink:0;padding:0 5px}.order-prescribed{background:#f1f7fe}.order-dialog textarea{margin-top:10px}.order-dialog select{font:inherit;border:0;color:var(--wdm-brand);background:#fff}.order-text-label{display:block;margin-top:16px;font-size:16px}.order-word-count{text-align:right;color:#999;font-size:12px;margin-top:5px}.order-dialog .sheet-head button{font-size:28px;color:#666;width:40px;height:40px}@media(max-width:350px){.orders-categories{padding:10px;gap:6px}.orders-categories button{font-size:12px;padding:4px 10px}.order-card{padding:12px;gap:8px}.order-content p{font-size:14px}.orders-workspace{margin:0 12px}.orders-list{margin:0 -12px;padding-left:12px;padding-right:12px}}
+.orders-term button:disabled,.orders-categories button:disabled{color:#aeb9ca;background:#f3f5f9;cursor:not-allowed;opacity:1}
+.orders-term button:disabled{background:transparent}.orders-categories .order-new:disabled{background:#f0f4fa;color:#aeb9ca}
+/* Win Mobile Checkbox：圆角蓝底勾选，复选框中心对齐文字首行中心。 */
+.orders-check input{appearance:none;-webkit-appearance:none;box-sizing:border-box;width:20px;height:20px;min-width:20px;margin:0;border:1px solid #c9c9c9;border-radius:4px;background:#fff;position:relative;vertical-align:middle}
+.orders-check input:checked{background:var(--wdm-brand);border-color:var(--wdm-brand)}
+.orders-check input:checked:after{content:'';position:absolute;left:5px;top:3px;width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);line-height:normal}
+.order-card{display:grid;grid-template-columns:20px minmax(0,1fr) auto;column-gap:12px;align-items:start}
+.order-card>.orders-check{height:25px;display:flex;align-items:center;justify-content:center;padding:0}
+.order-content p{margin:0;font-size:16px;line-height:25px}
+.order-card>.status{margin-top:2px;line-height:20px}
+.orders-selection>.orders-check{display:flex;align-items:center;gap:10px;min-height:25px;line-height:25px}
+.orders-check input:focus-visible{outline:2px solid var(--wdm-brand);outline-offset:3px}
+@media(max-width:350px){.order-card{column-gap:10px}.order-content p{font-size:14px;line-height:24px}.order-card>.orders-check{height:24px}}
+/* 二级期限页签沿用上方五列网格，统一文字中心线。 */
+.orders-term{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:0;border-bottom:1px solid #edf0f6}
+.orders-term button{width:100%;min-width:0;min-height:44px;padding:10px 4px;text-align:center;line-height:24px}
+.orders-term button[aria-selected=true]:after{left:calc(50% - 14px);right:auto;width:28px;height:2px}
+.patient-system-banner{display:flex;align-items:center;gap:10px;padding:14px 16px;background:#fff;margin-bottom:8px;min-height:68px}
+.system-patient-main{display:flex;align-items:center;gap:8px;flex:1;min-width:0;flex-wrap:wrap}
+.system-patient-main strong{font-size:18px;line-height:27px;font-weight:600;color:#000}
+.system-patient-main>span{font-size:14px;line-height:21px;color:#666;white-space:nowrap}
+.system-patient-main small{font-size:12px;line-height:20px;border:1px solid #b2cdff;border-radius:12px;color:var(--wdm-brand);padding:0 7px;white-space:nowrap}
+.system-bed-count{font-size:12px;color:#999;white-space:nowrap;flex-shrink:0}
+@media(max-width:350px){.patient-system-banner{padding:12px 10px;gap:8px}.system-patient-main{gap:4px 6px}.system-patient-main strong{font-size:16px}.system-patient-main>span{font-size:12px}.system-patient-main small{font-size:11px}.system-bed-count{font-size:11px}}
+
+/* 患者 Banner：保持原卡片尺寸，切换入口固定在右侧。 */
+.patient-banner.patient-card{display:flex;align-items:center;position:relative;padding-right:82px}
+.patient-banner .patient-info{flex:1;min-width:0}
+.patient-banner .patient-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap;overflow-wrap:anywhere}
+.patient-banner .patient-name .tag{margin-left:0;white-space:nowrap}
+.patient-banner .patient-info p{overflow-wrap:anywhere}
+.patient-banner .switch-button{position:absolute;right:16px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:4px;white-space:nowrap;margin:0}
+@media(max-width:350px){.patient-banner.patient-card{padding-right:70px}.patient-banner .switch-button{right:12px}}
+
+.patient-banner .bed-history-trigger{display:inline-flex;align-items:center;gap:4px;color:var(--wdm-brand);font-size:12px;min-height:24px;margin-top:2px}
+.patient-banner .bed-history-trigger .wm-icon{width:12px;height:12px}
+.bed-history-options{display:grid;gap:12px;margin-top:16px}
+.bed-history-option{display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;border:1px solid var(--wdm-line);padding:16px;border-radius:4px;width:100%;background:#fff}
+.bed-history-option[aria-pressed=true]{border-color:var(--wdm-brand);background:#f3f8ff}
+.bed-history-option>span:first-child{display:grid;gap:6px;min-width:0;overflow-wrap:anywhere}
+.bed-history-option strong{font-size:16px;font-weight:500}.bed-history-option small{font-size:12px;color:#888;margin-left:8px}
+.bed-history-option time,.bed-history-option strong+span{font-size:12px;color:#999}
+.bed-history-check{color:var(--wdm-brand);font-size:20px;flex-shrink:0}
+
+/* 建床切换紧跟家床号，窄屏时自然换行。 */
+.patient-banner .patient-bed-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.patient-banner .patient-bed-line p{margin:0}
+.patient-banner .patient-bed-line .bed-history-trigger{margin:0;min-height:18px;white-space:nowrap;flex-shrink:0}
+/* winPAD 参考：居中滚轮与连续选中分割线，逻辑尺寸适配移动端。 */
+.winpad-date-picker{padding:0 0 env(safe-area-inset-bottom);border-radius:12px 12px 0 0;background:#fff;overflow:hidden}
+.winpad-date-picker .datetime-toolbar{height:54px;grid-template-columns:72px 1fr 72px}
+.winpad-date-picker .datetime-toolbar button,.winpad-date-picker .datetime-toolbar button:first-child{color:var(--wdm-brand);font-size:17px}
+.winpad-date-picker .datetime-toolbar h2{font-size:18px;font-weight:500}
+.winpad-wheels{position:relative;display:grid;grid-template-columns:1.25fr repeat(4,1fr);height:220px;margin:12px 0;background:#fff}
+.winpad-wheel{height:220px;overflow-y:auto;overscroll-behavior:contain;scroll-snap-type:y mandatory;scrollbar-width:none;padding:88px 0;position:relative;z-index:1;touch-action:pan-y}
+.winpad-wheel::-webkit-scrollbar{display:none}
+.winpad-wheel button{display:block;width:100%;height:44px;min-height:44px;padding:0;line-height:44px;text-align:center;scroll-snap-align:center;font-size:21px;font-weight:400;color:#aaa;background:transparent;border:0;white-space:nowrap}
+.winpad-wheel button[data-distance="0"]{color:#000}.winpad-wheel button[data-distance="1"]{color:#333}.winpad-wheel button[data-distance="2"]{color:#aaa}
+.winpad-selection{position:absolute;top:88px;left:0;right:0;height:44px;border-top:1px solid var(--wdm-line);border-bottom:1px solid var(--wdm-line);pointer-events:none;z-index:2}
+.winpad-wheels:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:3;background:linear-gradient(#fffc,transparent 35%,transparent 65%,#fffc)}
+@media(max-width:350px){.winpad-wheel button{font-size:18px}}
+/* Win Mobile 步进器：横向标题与三段数值控件。 */
+#vital-form .wm-stepper-field{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.wm-stepper-field>.wm-field-label{flex-shrink:0;font-size:14px;color:#666;margin:0}
+.wm-stepper-with-unit{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:0}
+.wm-stepper-with-unit>small{font-size:12px;color:#999;white-space:nowrap}
+.wm-stepper{display:grid;grid-template-columns:36px minmax(62px,90px) 36px;gap:4px;align-items:center;min-width:0}
+#vital-form .wm-stepper button,#vital-form .wm-stepper input{height:36px;min-height:36px;border:1px solid #cbd4e5;background:#fff;padding:0;text-align:center;box-sizing:border-box;margin:0}
+#vital-form .wm-stepper button{font-size:24px;line-height:32px;color:#839ac7;border-radius:0;touch-action:manipulation}
+#vital-form .wm-stepper button:first-child{border-radius:6px 0 0 6px}
+#vital-form .wm-stepper button:last-child{border-radius:0 6px 6px 0}
+#vital-form .wm-stepper input{width:100%;font-size:18px;color:#000;border-radius:0;-moz-appearance:textfield}
+#vital-form .wm-stepper input::-webkit-inner-spin-button,#vital-form .wm-stepper input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+#vital-form .wm-stepper input::placeholder{font-size:13px;color:#aaa}
+#vital-form .wm-stepper button:disabled{color:#ccd3df;background:#f7f8fa}
+#vital-form .wm-stepper button:focus-visible,#vital-form .wm-stepper input:focus-visible{outline:2px solid var(--wdm-brand);outline-offset:2px}
+@media(max-width:350px){.wm-stepper{grid-template-columns:32px minmax(48px,64px) 32px}.wm-stepper-with-unit{gap:4px}#vital-form .wm-stepper-field{gap:6px}}
+#vital-form .wm-stepper-field{flex-direction:row;flex-wrap:nowrap;text-align:left}
+#vital-form .wm-stepper-field>.wm-field-label{display:block;text-align:left;align-self:center}
+#vital-form .wm-stepper-with-unit{flex-direction:row;margin-left:auto}
+/* 首页进入箭头：圆形强调入口，保持整张服务卡片可点击。 */
+.home-fixed-services>button>.chevron{width:40px;height:40px;min-width:40px;flex-shrink:0;padding:10px;border-radius:50%;background:var(--wdm-brand);color:#fff;stroke-width:2.5;position:relative;z-index:2;align-self:center;margin-left:auto;box-shadow:0 3px 8px #0075f51a}
+.home-fixed-services>button:nth-child(2)>.chevron{background:#0e8f65;color:#fff;box-shadow:0 3px 8px #0e8f651a}
+.home-fixed-services>button:active>.chevron{transform:translateX(2px)}
+.home-fixed-services>button:focus-visible{outline:2px solid var(--wdm-brand);outline-offset:3px}
+
+.my-page .logout-section{margin-top:12px;background:#fff;border:0;border-radius:4px;box-shadow:none;overflow:hidden}
+.my-page .logout-section .wm-cell{min-height:56px;padding:16px;font-size:16px;line-height:24px;color:var(--wdm-text)}
+.my-page .logout-section .wm-cell{justify-content:center;text-align:center}
+.my-page .logout-section .cell-copy{flex:0 1 auto;text-align:center}

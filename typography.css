@@ -1,0 +1,42 @@
+/* 全站文字语义。来源：Win Mobile PDF p4–8、Sketch 2.0.2 tokens。
+ * 项目采用 Sketch 主题 #0075F5；375 CSS 逻辑宽，设计字号只缩放一次。
+ * 小标签等保留组件局部尺寸，不对所有 span/small 强制同一字号。
+ */
+:root{--wm-type-nav:18px;--wm-type-heading:16px;--wm-type-body:16px;--wm-type-label:14px;--wm-type-caption:12px}
+body{color:var(--wdm-text);font-size:var(--wm-type-body);line-height:1.5}
+button,input,textarea,select{font-family:inherit}
+.sub-nav h1,.patient-nav h1,.pl-top-nav h1,.brand-copy h1{font-size:var(--wm-type-nav);line-height:27px;font-weight:500;color:#fff}
+.block-title,.expense-orders .block-title,.clinical-section-title,.record-section-heading h2{font-size:var(--wm-type-heading);line-height:24px;font-weight:500;color:var(--wdm-brand)}
+.record-heading h2,.rx-copy h2,.consult-doctor span{font-size:16px;line-height:24px;font-weight:500;color:var(--wdm-text)}
+.patient-banner .patient-name,.pl-identity h2{font-size:18px;line-height:27px;font-weight:500;color:var(--wdm-text)}
+.report-text,.message-item p,.wm-form-cell dd{font-size:16px;line-height:24px;color:var(--wdm-text)}
+.wm-form-cell dt,.wm-field-label,.field-label,.rating-field>label{font-size:14px;line-height:21px;color:var(--wdm-secondary)}
+.patient-banner .patient-info p,.record-meta,.detail-footnote,.rx-copy time,.rx-items p,.expense-order div>span,.message-item time,.message-item small,.word-count,.list-end,.chart-caption{font-size:12px;line-height:18px;color:var(--wdm-muted)}
+.expense-order>p,.rx-items strong,.order-name{font-size:14px;line-height:21px;color:var(--wdm-text)}
+.expense-amount,.expense-total strong,.expense-order strong,.expense-detail-info .wm-form-cell:last-child dd,.rx-amount-label strong{color:var(--wdm-brand);font-variant-numeric:tabular-nums}
+.primary-button{font-size:16px;line-height:24px;color:#fff;background:var(--wdm-brand)}
+.wm-required,.vital-validation{color:var(--wdm-error)}
+input::placeholder,textarea::placeholder{color:var(--wdm-muted)}
+/* 时间与数值字段均为标题左、控件右，避免上下结构混用。 */
+#vital-form .clinical-field{flex-direction:row;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:14px 0}
+#vital-form .clinical-field>span:first-child,#vital-form .wm-stepper-field>.wm-field-label{width:auto;max-width:none;flex-shrink:0;font-size:14px;line-height:21px;color:var(--wdm-secondary)}
+#vital-form .clinical-field>.wm-date-trigger{flex:1;min-width:0;width:auto;max-width:280px;margin:0;height:44px;padding:8px 10px;gap:6px;font-size:16px;line-height:24px;color:var(--wdm-text)}
+#vital-form .wm-date-trigger [data-date-display]{min-width:0;white-space:nowrap;font-size:inherit}
+#vital-form .wm-date-trigger svg{width:20px;height:20px;flex-shrink:0;color:var(--wdm-icon)}
+#vital-form .wm-stepper-field>.wm-stepper-with-unit{margin-left:auto}
+@media(max-width:350px){#vital-form .clinical-field{gap:8px}#vital-form .clinical-field>.wm-date-trigger{font-size:14px;padding:8px}.patient-banner .patient-name{font-size:16px}}
+
+/* 费用明细区块标题按最新确认使用黑色。 */
+.expense-orders .block-title{color:var(--wdm-text)}
+/* 按用户确认：业务说明文字提高至16px，保留辅助色层级。 */
+.record-meta,.detail-footnote,.rx-copy time,.rx-items p,
+.expense-order div>span,.message-item time,.message-item small,
+.list-end,.chart-caption,.report-record .record-meta,
+.patient-banner .patient-info p,.contact-hint,.rating-description,
+.doc-subtitle,.list-summary,.record-bottom,.report-text,
+.consult-doctor small,.pl-meta,.pl-results{
+ font-size:16px;line-height:24px;
+}
+.record-meta{flex-wrap:wrap;gap:8px}
+
+.expense-order strong{font-size:16px;line-height:24px;font-weight:500}
