@@ -4,7 +4,7 @@ import { patients } from './patients.js';
 import { WmPatientBanner } from './patient-banner.js?v=20261126-stepper';
 import { mountWinAvatars } from './vendor/win-avatar.js';
 import { renderIdentity, initIdentity, rememberedIdentity } from './identity.js?v=20261126-role-icons';
-import { renderFeature, initFeatures } from './features.js?v=20261126-stepper';
+import { renderFeature, initFeatures } from './features.js?v=20261126-report-clean';
 // 依据 WinDesign Mobile 视觉规范的项目本地组件；并非官方组件库 API。
 const paths = {
  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
