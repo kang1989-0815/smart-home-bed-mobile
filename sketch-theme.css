@@ -442,3 +442,6 @@ header.wm-title-nav button{color:#fff}
 .my-page .logout-section .wm-cell{min-height:56px;padding:16px;font-size:16px;line-height:24px;color:var(--wdm-text)}
 .my-page .logout-section .wm-cell{justify-content:center;text-align:center}
 .my-page .logout-section .cell-copy{flex:0 1 auto;text-align:center}
+
+/* 网页使用设备自身状态栏，移除模拟状态栏高度。 */
+:root{--wdm-statusbar-height:0px}
